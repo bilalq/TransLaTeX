@@ -10,9 +10,11 @@ section(
 
 section:
   frac:
-    log a, x
-    log a, b
+    (log a, x),
+    (log a, b)
 
 
 section:
   lim x -> inf:
+    frac:
+      (log x) ^ 2,

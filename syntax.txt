@@ -5,7 +5,7 @@ General Ideas:
 - Interprets as math by default. Text inside "quotes" will be interpreted as
   a string.
 - For now, alignment will be either center, left, or right.
-  Possibly use a config.rb file to customize template settings
+  Possibly use a config.yml file to customize template settings
 
 Syntax:
   Syntax Element                  Syntax Style
