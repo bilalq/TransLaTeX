@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+require 'rex'
+require 'racc'
+
+options = {}
+
+OptionParser.new do |opts|
+  opts.banner = 'Usage: translatex [options]'
+
+
+
