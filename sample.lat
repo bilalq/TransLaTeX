@@ -1,0 +1,18 @@
+title(Homework 1)
+Laticified Edition
+
+section(
+  frac(
+    log(a,x),
+    log(a,b)
+  )
+)
+
+section:
+  frac:
+    log a, x
+    log a, b
+
+
+section:
+  lim x -> inf:
