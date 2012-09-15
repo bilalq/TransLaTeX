@@ -1,0 +1,38 @@
+Ideas for the syntax I want to use
+==================================
+
+General Ideas:
+- Interprets as math by default. Text inside "quotes" will be interpreted as
+  a string.
+- For now, alignment will be either center, left, or right.
+  Possibly use a config.rb file to customize template settings
+
+Syntax:
+  Syntax Element                  Syntax Style
+  ==============                  ============
+  Operators:                      + - * / > < >= <= = != ( ) [ ] { } |
+  Escape character:               \
+  Square roots:                   sqrt(...)
+  Superscripts:                   normal^(super)
+  Subscripts:                     normal_(sub)
+  Sums:                           sum(i=1 -> n, ...)
+  Limits:                         lim(x -> inf, ...)
+  Fractions:                      frac(numerator, denominator)
+
+  Greek Letters/Quantifiers/Symbols
+  (Use capital letter for beginning to get upper case version of the letter)
+  Reference by
+  ============
+  $pi
+  $theta
+  $sigma
+  $epsilon
+  $nu
+  $exists
+  $forall
+  $not
+  $in
+  $notin
+  etc...
+
+
