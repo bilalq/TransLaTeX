@@ -19,3 +19,6 @@ doc/
 
 #Latexian stuff
 TSWLatexianTemp_000032*
+
+#RVM preferences
+.rvmrc
