@@ -16,3 +16,6 @@ tmp
 .yardoc
 _yardoc
 doc/
+
+#Latexian stuff
+TSWLatexianTemp_000032*
