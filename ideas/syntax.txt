@@ -35,4 +35,6 @@ Syntax:
   $notin
   etc...
 
+FORGET ALL THE ABOVE.
 
+KEEP CALM AND USE LISP.
