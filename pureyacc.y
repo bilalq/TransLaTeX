@@ -3,12 +3,20 @@
 # Grammar for TransLaTex
 
 class Translatex
+  prechigh
+    #Do I need anything here???
+  preclow
 rule
-  statement: '(' sexpr ')' { result = '' }
+  statement: '(' sexpr ')'
 
-  sexpr: '(' sexpr ')' { result }
+  sexpr: '(' sexpr ')' {'(' + 'banana' + sexpr +')'}
        | func members
        | 'section'
+
+  sexpr -> <id> | ( sexpr . sexpr)
+
+        '(' 'frac' sexpr ')'  {'\frac{' val[3] '}'}
+
 
   func: '#'
       | '+'
@@ -40,3 +48,4 @@ rule
         | '$nu'
         | '$Nu'
 end
+

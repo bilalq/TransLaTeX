@@ -1,3 +1,4 @@
+*.tab.rb
 *.gem
 *.rbc
 .bundle
