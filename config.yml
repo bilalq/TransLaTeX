@@ -1,0 +1,7 @@
+# Layout Settings
+fontSize: 12pt
+documentclass: url, graphicx, tabularx, array, geometry, amsmath
+documentClass: article
+parskip: 1ex
+parindent: 0pt
+linespread: 1

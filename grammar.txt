@@ -1,0 +1,25 @@
+Context Free Grammar
+
+section: no args
+program => stmtlist
+stmtlst => stmt\n stmtlist | stmt
+stmt => (+ expr expr) {{ $$.value = $1.value + $2.value }} | num - num | num * num
+num => int(0,9)
+
+program:
+  stmtlist()
+stmtlist():
+  stmst()
+  if im out of tokens:
+     return
+  else:
+    stmtlist()
+
+stmt():
+  a = num()
+  if token == '+':
+    b = num()
+    return a+b
+
+  LL1 grammar
+

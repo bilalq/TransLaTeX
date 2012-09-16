@@ -1,0 +1,24 @@
+(title Homework 1)
+Bilal Quadri
+
+(section)
+(#
+  (+
+    (frac
+      (log a x)
+      (log a b)
+    ) \\
+    (sum x $inf (^ x 2))
+  )
+)
+
+(section)
+(#
+  (= (- 10 4) 6) \\
+  (= (^ 2 2) 4)
+)
+
+This is cooler than #{$pi} .
+
+(+ '(3 4 6 7))
+(+ 3 4 5 6)

@@ -1,13 +1,22 @@
 #!/usr/bin/env ruby
 
-require 'optparse'
+#require 'optparse'
 require 'rex'
 require 'racc'
+require 'yaml'
 
 options = {}
 
-OptionParser.new do |opts|
-  opts.banner = 'Usage: translatex [options]'
+#OptionParser.new do |opts|
+  #opts.banner = 'Usage: translatex [options]'
+  ##Not doing anything with these yet
+#end
 
+config = YAML.load_file('config.yml')
+puts config.inspect
 
+filename = ARGV[0]
 
+File.open(filename).each do |line|
+  
+end
