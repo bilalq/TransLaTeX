@@ -1,4 +1,4 @@
-TransLaTex
+TransLaTeX
 ==========
 
 An alternative syntax for writing math in LaTex that's clean, simple, and 
