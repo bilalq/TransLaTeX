@@ -4,22 +4,42 @@
 
 class Lispp
 rule
-  target: '(' 'sexpr' ')'   { p "start"          }
+  target: '(' sexpr ')'       { result = "" }
+        #| '(' atom ')'       { result = val.join('gap')  }
         ;
 
-  sexpr: atom               { p += "matched atom"  }
-       | '(' func sexpr ')' { p += "matched sexpr"      }
-       | '(' 'section' ')'  { p += "section hit"        }
+  sexpr: func '(' sexpr ')'   { result += "\\#{val[0]} " }
+       | func atom
        ;
 
-  atom: NUMBER              { p += "matched num"        }
-      | SYMBOL              { p += "matched sym"        }
-      | STRING              { p += "section str"        }
+  func: 'lim'                 { result = result }
+      | 'sum'                 { result = result }
+      | '+'                   { result = result }
+      | '-'                   { result = result }
+      | '*'                   { result = result }
+      | '/'                   { result = result }
       ;
 
-  func: 'lim'               { p += "matched lim"        }
-      | 'sum'               { p += "matched sum"        }
-      ;
+  #atom: NUMBER              { result = val.join('gap')  }
+      #| SYMBOL              { result = val.join('gap')  }
+      #| STRING              { result = val.join('gap')  }
+      #;
+
+  #sexpr:
+       #| '(' func sexpr ')' { result += "matched sexpr" }
+       #| '(' 'section' ')'  { result += "section hit"   }
+       #| atom               { result += "matched atom"  }
+       #;
+
+  #func: 'lim'               { result += "matched lim"   }
+      #| 'sum'               { result += "matched sum"   }
+      #| '+'                 { result += "op"            }
+      #;
+
+  #atom: NUMBER              { result += "matched num"   }
+      #| SYMBOL              { result += "matched sym"   }
+      #| STRING              { result += "section str"   }
+      #;
 end
 
 
@@ -28,7 +48,11 @@ end
 ---- inner
 
 def parse(str)
+  input = str.split " "
   @q = []
+  input.each do |curr|
+    @q.push [curr, curr]
+  end
   #until str.empty?
     #s = $&
     #@q.push [s, s]

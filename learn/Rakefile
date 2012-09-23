@@ -1,0 +1,18 @@
+require 'rake'
+
+grammar = "lisp"
+
+task :build do
+  sh "racc #{grammar}.y"
+end
+
+task :run do
+  sh "ruby #{grammar}.tab.rb"
+end
+
+task :clean do
+    sh "rm -f #{grammar}.tab.rb"
+end
+
+task :default => [:build, :run]
+
